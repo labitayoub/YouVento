@@ -19,14 +19,11 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', [HomeController::class,'index']);
-Route::get('/calendrier', [CalendrierController::class,'index']);
-Route::get('/evenement', [EvenementController::class,'index']);
-Route::get('/inscrire', [InscrireController::class,'index']);
-Route::get('clubs', [ClubController::class, 'index'])->name('posts.index');   // Afficher tous les posts
-Route::get('clubs/create', [ClubController::class, 'create'])->name('posts.create'); // Formulaire de création
+Route::get('clubs', [ClubController::class, 'index'])->name('clubs.index');   // Afficher tous les posts
+Route::get('clubs/create', [ClubController::class, 'create'])->name('clubs.create'); // Formulaire de création
 Route::post('clubs', [ClubController::class, 'store']);  // Sauvegarder un post
-Route::get('clubs/{id}', [ClubController::class, 'show'])->name('posts.show');  // Afficher un post
-Route::get('clubs/{id}/edit', [ClubController::class, 'edit'])->name('posts.edit'); // Formulaire d'édition
+Route::get('clubs/{id}', [ClubController::class, 'show'])->name('clubs.show');  // Afficher un post
+Route::get('clubs/{id}/edit', [ClubController::class, 'edit'])->name('clubs.edit'); // Formulaire d'édition
 Route::put('clubs/{id}', [ClubController::class, 'update']);  // Mettre à jour un post
 Route::delete('clubs/{id}', [ClubController::class, 'destroy']);  // Supprimer un post
 

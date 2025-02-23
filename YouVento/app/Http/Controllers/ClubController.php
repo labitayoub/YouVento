@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Club;
+use Illuminate\Http\Request;
 
 class ClubController extends Controller
 {
     public function index()
 {
-    $posts = Club::all();
-    return view('posts.index', compact('clubs'));
+    $clubs = Club::all();
+    return view('clubs.index', compact('clubs'));
 }
 public function create()
 {

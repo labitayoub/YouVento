@@ -1,4 +1,4 @@
-<form action="{{ route('clubs.update', $post->id) }}" method="POST">
+<form action="{{ route('clubs.update', $club->id) }}" method="POST">
     @csrf
     @method('PUT')
     <label for="title">Titre:</label>

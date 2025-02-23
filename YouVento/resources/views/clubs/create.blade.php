@@ -1,10 +1,10 @@
-<form action="{{ route('clubs.store') }}" method="POST">
-    @csrf
-    <label for="title">Titre:</label>
-    <input type="text" name="title" id="title" required>
-    
-    <label for="content">Contenu:</label>
-    <textarea name="content" id="content" required></textarea>
-    
-    <button type="submit">Créer</button>
-</form>
+@extends('layouts.app')
+
+@section('content')
+    <form action="{{ route('clubs.store') }}" method="POST">
+        @csrf
+        <input type="text" name="title" placeholder="Titre">
+        <textarea name="content" placeholder="Contenu"></textarea>
+        <button type="submit">Ajouter</button>
+    </form>
+@endsection

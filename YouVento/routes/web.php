@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [HomeController::class,'index']);
 Route::resource('clubs', ClubController::class);
+Route::fallback(function () {
+    return "Page non trouvée !";
+});
 
 Auth::routes();
 

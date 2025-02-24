@@ -24,7 +24,6 @@ class ClubController extends Controller
 
             'name' => 'required',
             'description' => 'required',
-            'category' => 'required',
         ]);
 
         Club::create($request->all());
@@ -46,7 +45,6 @@ class ClubController extends Controller
         $request->validate([
             'name' => 'required',
             'description' => 'required',
-            'category' => 'required',
         ]);
 
         $Club->update($request->all());
